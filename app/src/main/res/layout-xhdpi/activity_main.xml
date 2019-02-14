@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <fragment
+            android:id="@+id/fraglist"
+            class="com.ankush.shrivastava.ankush.MainFragment.MyListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></fragment>
+    </FrameLayout>
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myProcessbar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="bottom"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ViewAnimator
+        android:id="@+id/myViewAnimator"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/noConnection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/pure_red"
+            android:gravity="center"
+            android:text="No Connection"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/loadingData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="Loading Data"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/connected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:gravity="center"
+            android:text="Connected"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/nothingFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grenish_blue"
+            android:gravity="center"
+            android:text="Nothing Found"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/somethingWrong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/pure_red"
+            android:gravity="center"
+            android:text="Something Went Wrong"
+            android:textColor="@color/white" />
+    </ViewAnimator>
+
+</LinearLayout>
